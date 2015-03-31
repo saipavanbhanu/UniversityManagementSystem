@@ -1,0 +1,10 @@
+{% if user %}
+    <ul>
+    {% for user in user %}
+        <li><a href="/login/{{ user.id }}/">{{ user.unique_id }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No Users as of yet.</p>
+{% endif %}
+
